@@ -1,0 +1,397 @@
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    --antd-wave-shadow-color: #1764E8;
+}
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+body{
+    margin: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-variant: tabular-nums;
+    /* 使用等宽数字（tabular figures）而不是默认的等比例数字 */
+    line-height: 1.5;
+    background-color: #fff;
+    font-feature-settings: 'tnum';
+     /* 表示启用字体中的等宽数字特性。 */
+    flex: 1;
+}
+@font-face {
+    font-family: AlibabaPuHuiTiH;
+    src: url('./font/Alibaba-PuHuiTi-Heavy.ttf');
+  }
+h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+}
+ul, dl{
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+/* ul style */
+ul{
+    display: block;
+    list-style-type: disc;
+    /* list-item的前面的圆点设置 */
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 20px;
+}
+
+.page-header{
+    position: fixed;
+    top: 0;
+    /* 上面两条，固定导航栏 */
+    width: 100%;
+    min-width: 1184px;
+    height: 72px;
+    line-height: 72px;
+    padding: 0 calc((100% - 1184px) / 2);
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
+    z-index: 300;
+}
+.page-header .logo-container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    min-width: 615px;
+    max-width: 100%;
+}
+.logo-container img{
+    width: 259px;
+    height: 36px;
+}
+.page-header .button-container{
+    position: absolute;
+    right:calc((100% - 1184px) / 2);
+    top:50%;
+    margin-top: -36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 186px;
+    height: 72px;
+}
+.button-container .login-btn{
+    width: 88px;
+    height: 32px;
+    border-radius: 2px;
+    border: 1px solid #1764e8;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #1764e8;
+    background-color: #ffffff;
+    cursor: pointer;
+}    
+.button-container .apply-btn{
+    width: 88px;
+    height: 32px;
+    border-radius: 2px;
+    border: 1px solid #1764e8;
+    background: #1764e8;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+
+}
+.banner-section{
+    height: 418px;
+    width: 100%;
+    min-width: 1184px;
+    background: url(./image/banner-side.97a04d37.png) repeat-x;
+    background: url(./image/banner.c10dc550.png) no-repeat center / contain;
+    background-size: auto 100%;
+    position: relative;
+}
+.banner-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 96px 0 0;
+    text-align: center;
+    margin: 0 auto;
+}
+.banner-container .banner-title{
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+    font-size: 32px;
+    font-family: AlibabaPuHuiTiM;
+    color: #ffffff;
+}
+.banner-container .banner-subtitle{
+    height: 28px;
+    font-size: 20px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 28px;
+    margin-top: 12px;
+}
+.page-mainer{
+    margin-top: 72px;;
+    overflow-y: auto;
+    flex: 1;
+    /* auto: 如果内容超出容器的高度，浏览器将自动添加垂直滚动条，允许用户滚动查看溢出的内容。如果内容没有溢出，就不会显示滚动条。 */
+}
+/* section-wrap 2 3 的文字位置 */
+.page-mainer .section-wrap{
+    width: 100%;
+    height: 418px;
+    min-width: 1184px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-sizing: border-box;
+    display: block;
+}
+.page-mainer .section-wrap .section-container{
+    width: 1184px;
+    height: 418px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 64px 32px;
+    display: flex;
+    /* justify-content: center; */
+    
+    justify-content: space-between;
+}
+.section-container .section-container-text{
+    box-sizing: border-box;
+    width:404px;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+.section-container .section-container-img{
+    width: 656px;
+    height: 290px; 
+}
+.section-container .section-container-img img{
+    width: 100%;
+    height: 100%;
+    width: 656px;
+    height: 290px; 
+}
+.section-container-text .section-title{
+    padding: 24px 0 0;
+    font-size: 32px;
+    font-family: AlibabaPuHuiTiB;
+    color: #000000;
+    display:block;
+}
+
+.section-container-text .add-list{
+    margin-top: 32px;
+}
+.section-container-text .add-item{
+    margin-top: 16px;
+    line-height: 26px;
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+}
+.section-wrap-product{
+    box-sizing: border-box;
+    height: 418px;
+    padding-top: 72px;
+    padding-bottom: 79px;
+    width: 100%;
+    min-width: 1184px;
+    margin: 0 auto;
+    background: #ffffff;
+    display: block;
+}
+
+.section-wrap-product .section-title{
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    padding-bottom: 56px;
+    font-family: AlibabaPuHuiTiB;
+    color: #000000;
+    /* text-align: center; */
+}
+.section-wrap-product .section-list-container{
+    box-sizing: border-box;
+    width: 1184px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.section-wrap-product .section-list-container .img-text-container{
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.section-wrap-product .section-list-container .img-text-container img{
+    width: 72px;
+    height: 72px;   
+}
+.section-wrap-product .img-text-container .title-item{
+    font-size: 20px;
+    color: #000000;
+    line-height: 28px;
+    margin-bottom: 14px;
+    margin-top: 24px;
+
+}
+.section-wrap-product .img-text-container .descpt-item{
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.section-wrap-apply{
+    box-sizing: border-box;
+    min-width: 1440px;
+    width: 100%;
+    height: 348px;
+    background-color: #196eff;
+    margin: 0 auto;
+    background: #ffffff;
+}
+.section-wrap-apply .apply-box{
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 1440px;
+    height: 348px;
+    padding-top: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: url(./image/apply-bg.2c330740.png) repeat-x center / cover;
+}
+.section-wrap-apply .apply-box .section-title{
+    height: 40px;
+    font-size: 32px;
+    font-family: AlibabaPuHuiTiB;
+    color: #ffffff;
+    line-height: 40px;
+}
+.section-wrap-apply .apply-box .apply-content{
+    margin: 16px 0 32px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 40px;
+}
+.section-wrap-apply .apply-box .section-apply-btn{
+    width: 160px;
+    height: 52px;
+    background: #ffffff;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    color: #1764e8;
+}
+
+.section-wrap-leg{
+    width: 100%;
+    height: 84px;
+    min-width: 1184px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-top: 1px solid #ebebeb; 
+
+}
+.section-wrap-leg .section-leg-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1184px;
+    margin: 0 auto;
+    padding-right: 32px;
+    line-height: 84px;
+    height: 84px;
+    box-sizing: border-box;
+}
+.section-wrap-leg .section-leg-container .section-leg-img{
+    width: 116px;
+    height: 36px;
+    margin: auto 0;
+    vertical-align: top;
+}
+.section-wrap-leg .section-leg-container .section-leg-link{
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.section-wrap-leg .section-leg-container .section-leg-box{
+    margin: 0;
+    padding: 0;
+    height: 84px;
+    box-sizing: border-box;
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+.section-wrap-leg .section-leg-container .section-leg-box .section-leg-title{
+    font-size: 16px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.85);
+    margin-right: 12px;
+}
+.section-wrap-leg .section-leg-container .section-leg-box .section-leg-desc{
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+}
+.page-footer{
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    min-width: 1184px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+.page-footer .page-footer-info{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.65);
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+.page-footer .page-footer-info a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.65);
+}
