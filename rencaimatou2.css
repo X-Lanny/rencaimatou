@@ -74,17 +74,19 @@ ul{
     z-index: 300;
 }
 .page-header .logo-container{
-    display: flex;
-    align-items: center;
     height: 100%;
     min-width: 615px;
     max-width: 100%;
+    display: flex;
+    align-items: center;
 }
 .logo-container img{
     width: 259px;
     height: 36px;
 }
 .page-header .button-container{
+    width: 186px;
+    height: 72px;
     position: absolute;
     right:calc((100% - 1184px) / 2);
     top:50%;
@@ -92,8 +94,6 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 186px;
-    height: 72px;
 }
 .button-container .login-btn{
     width: 88px;
@@ -121,25 +121,30 @@ ul{
     position: absolute;
     right: 0;
     cursor: pointer;
-
 }
 .banner-section{
     height: 418px;
     width: 100%;
     min-width: 1184px;
     background: url(./image/banner-side.97a04d37.png) repeat-x;
-    background: url(./image/banner.c10dc550.png) no-repeat center / contain;
     background-size: auto 100%;
+}
+.banner-section .banner-section-inner-img{
     position: relative;
+    min-width: 1184px;
+    height: 418px;
+    position: relative;
+    background: url(./image/banner.c10dc550.png) no-repeat center / contain;
 }
 .banner-container{
+    padding: 96px 0 0;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 96px 0 0;
     text-align: center;
-    margin: 0 auto;
+    
 }
 .banner-container .banner-title{
     height: 40px;
@@ -168,7 +173,6 @@ ul{
 /* section-wrap 2 3 的文字位置 */
 .page-mainer .section-wrap{
     width: 100%;
-    height: 418px;
     min-width: 1184px;
     margin: 0 auto;
     background: #ffffff;
@@ -180,28 +184,19 @@ ul{
     height: 418px;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 64px 32px;
+    padding: 64px 12px;
+    /* 这个由32改为12 */
     display: flex;
-    /* justify-content: center; */
-    
-    justify-content: space-between;
+    justify-content: center;
 }
 .section-container .section-container-text{
     box-sizing: border-box;
-    width:404px;
-    margin: 0;
-    padding: 0;
-    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
-.section-container .section-container-img{
-    width: 656px;
-    height: 290px; 
+.section-container .section-container-text.left{
+    width: 404px;
 }
-.section-container .section-container-img img{
-    width: 100%;
-    height: 100%;
-    width: 656px;
-    height: 290px; 
+.section-container .section-container-text.right{
+    width: 352px;
 }
 .section-container-text .section-title{
     padding: 24px 0 0;
@@ -213,6 +208,7 @@ ul{
 
 .section-container-text .add-list{
     margin-top: 32px;
+    padding-left:  20px;
 }
 .section-container-text .add-item{
     margin-top: 16px;
@@ -221,6 +217,22 @@ ul{
     font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.85);
+}
+.section-container .section-container-img{
+    width: 656px;
+    height: 290px; 
+    flex:none;
+}
+.section-container .section-container-img.right{
+    margin-left: 80px;
+}
+.section-container .section-container-img img{
+    width: 100%;
+    object-fit: contain;
+    /* sets how the content of a replaced element, such as an <img> or <video>, should be resized to fit its container. */
+}
+.section-container .section-container-img.left{
+    margin-right: 88px;
 }
 .section-wrap-product{
     box-sizing: border-box;
@@ -233,32 +245,32 @@ ul{
     background: #ffffff;
     display: block;
 }
-
 .section-wrap-product .section-title{
-    display: flex;
-    justify-content: center;
     font-size: 32px;
     padding-bottom: 56px;
     font-family: AlibabaPuHuiTiB;
     color: #000000;
-    /* text-align: center; */
+    text-align: center;
 }
 .section-wrap-product .section-list-container{
     box-sizing: border-box;
     width: 1184px;
+    height: 162px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
 }
 .section-wrap-product .section-list-container .img-text-container{
     text-align: center;
-    box-sizing: border-box;
 }
 
 .section-wrap-product .section-list-container .img-text-container img{
     width: 72px;
     height: 72px;   
+    object-fit: cover;
+    vertical-align: middle;
+    /* 当应用在行内元素或行内块级元素上时，vertical-align 控制元素与行内元素框的垂直对齐方式。middle 的效果是使元素的中部与行内框的中部对齐。 */
+
 }
 .section-wrap-product .img-text-container .title-item{
     font-size: 20px;
@@ -266,7 +278,6 @@ ul{
     line-height: 28px;
     margin-bottom: 14px;
     margin-top: 24px;
-
 }
 .section-wrap-product .img-text-container .descpt-item{
     font-family: PingFangSC-Regular, PingFang SC;
@@ -281,7 +292,6 @@ ul{
     height: 348px;
     background-color: #196eff;
     margin: 0 auto;
-    background: #ffffff;
 }
 .section-wrap-apply .apply-box{
     box-sizing: border-box;
@@ -329,7 +339,6 @@ ul{
     margin: 0 auto;
     background: #ffffff;
     border-top: 1px solid #ebebeb; 
-
 }
 .section-wrap-leg .section-leg-container{
     display: flex;
@@ -346,28 +355,22 @@ ul{
     width: 116px;
     height: 36px;
     margin: auto 0;
+    object-fit: contain;
     vertical-align: top;
 }
-.section-wrap-leg .section-leg-container .section-leg-link{
+.section-wrap-leg .section-leg-container a{
     text-decoration: none;
     color: rgb(51, 51, 51);
     cursor: pointer;
     transition: color 0.3s;
-}
-.section-wrap-leg .section-leg-container .section-leg-box{
-    margin: 0;
-    padding: 0;
-    height: 84px;
-    box-sizing: border-box;
-    display: block;
-    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    text-align: center;
 }
 .section-wrap-leg .section-leg-container .section-leg-box .section-leg-title{
     font-size: 16px;
     font-family: PingFangSC-Medium, PingFang SC;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.85);
-    margin-right: 12px;
+    margin-right: 8.10px;
 }
 .section-wrap-leg .section-leg-container .section-leg-box .section-leg-desc{
     font-size: 16px;
@@ -375,6 +378,7 @@ ul{
     font-weight: 400;
     color: rgba(0, 0, 0, 0.65);
 }
+
 .page-footer{
     width: 100%;
     height: 64px;
