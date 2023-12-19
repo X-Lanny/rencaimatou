@@ -83,7 +83,7 @@ ul{
     width: 259px;
     height: 36px;
 }
-.page-header .header-container-aside{
+.page-header .header-container-right{
     width: 186px;
     height: 72px;
     position: absolute;
@@ -94,7 +94,7 @@ ul{
     align-items: center;
     justify-content: space-between;
 }
-.header-container-aside .header-login-btn{
+.header-container-right .header-login-btn{
     width: 88px;
     height: 32px;
     border-radius: 2px;
@@ -107,7 +107,7 @@ ul{
     background-color: #ffffff;
     cursor: pointer;
 }    
-.header-container-aside .header-apply-btn{
+.header-container-right .header-apply-btn{
     width: 88px;
     height: 32px;
     border-radius: 2px;
@@ -167,15 +167,21 @@ ul{
 .page-mainer .intro-section{
     width: 100%;
     min-width: 1184px;
+    height: 418px;
     margin: 0 auto;
     background: #ffffff;
 }
 .page-mainer .intro-section .intro-container{
-    width: 1184px;
+    height: 418px;
     margin: 0 auto;
     padding: 64px 12px;
     display: flex;
     justify-content: center;
+}
+.intro-container.university{
+    background: rgb(246, 249, 254);
+    min-width: 1440px;
+    width:100%;
 }
 .intro-container .intro-box.left{
     width: 404px;
@@ -240,24 +246,24 @@ ul{
     display: flex;
     justify-content: space-between;
 }
-.product-section .product-container .product-box{
+.product-section .product-container .product-content{
     text-align: center;
 }
-.product-section .product-container .product-box img{
+.product-section .product-container .product-content img{
     width: 72px;
     height: 72px;   
     object-fit: cover;
     vertical-align: middle;
     /* 当应用在行内元素或行内块级元素上时，vertical-align 控制元素与行内元素框的垂直对齐方式。middle 的效果是使元素的中部与行内框的中部对齐。 */
 }
-.product-section .product-box .product-item-title{
+.product-section .product-content .product-item-title{
     font-size: 20px;
     color: #000000;
     line-height: 28px;
     margin-bottom: 14px;
     margin-top: 24px;
 }
-.product-section .product-box .product-item-desc{
+.product-section .product-content .product-item-desc{
     font-family: PingFangSC-Regular, PingFang SC;
     font-size: 16px;
     color: rgba(0, 0, 0, 0.45);
