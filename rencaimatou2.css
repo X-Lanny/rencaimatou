@@ -72,18 +72,18 @@ ul{
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
     z-index: 300;
 }
-.page-header .header-logo-container{
+.page-header .header-container{
     height: 100%;
     min-width: 615px;
     max-width: 100%;
     display: flex;
     align-items: center;
 }
-.header-logo-container img{
+.header-container img{
     width: 259px;
     height: 36px;
 }
-.page-header .header-button-container{
+.page-header .header-container-aside{
     width: 186px;
     height: 72px;
     position: absolute;
@@ -94,7 +94,7 @@ ul{
     align-items: center;
     justify-content: space-between;
 }
-.header-button-container .header-login-btn{
+.header-container-aside .header-login-btn{
     width: 88px;
     height: 32px;
     border-radius: 2px;
@@ -107,7 +107,7 @@ ul{
     background-color: #ffffff;
     cursor: pointer;
 }    
-.header-button-container .header-apply-btn{
+.header-container-aside .header-apply-btn{
     width: 88px;
     height: 32px;
     border-radius: 2px;
@@ -121,19 +121,19 @@ ul{
     right: 0;
     cursor: pointer;
 }
-.section-wrap-banner{
+.banner-section{
     height: 418px;
     width: 100%;
     min-width: 1184px;
     background: url(./image/banner-side.97a04d37.png) repeat-x;
     background-size: auto 100%;
 }
-.section-wrap-banner .banner-background-container{
+.banner-section .banner-background{
     min-width: 1184px;
     height: 418px;
     background: url(./image/banner.c10dc550.png) no-repeat center / contain;
 }
-.banner-text-container{
+.banner-container{
     padding: 96px 0 0;
     margin: 0 auto;
     display: flex;
@@ -142,7 +142,7 @@ ul{
     align-items: center;
     text-align: center; 
 }
-.banner-text-container .banner-text-title{
+.banner-container .banner-title{
     height: 40px;
     line-height: 40px;
     letter-spacing: 4px;
@@ -151,7 +151,7 @@ ul{
     font-family: AlibabaPuHuiTiM;
     color: #ffffff;
 }
-.banner-text-container .banner-text-subtitle{
+.banner-container .banner-desc{
     height: 28px;
     font-size: 20px;
     font-family: PingFangSC-Regular, PingFang SC;
@@ -164,36 +164,36 @@ ul{
     margin-top: 72px;
     /* overflow-y: auto; auto: 如果内容超出容器的高度，浏览器将自动添加垂直滚动条，允许用户滚动查看溢出的内容。如果内容没有溢出，就不会显示滚动条。 */
 }
-.page-mainer .section-wrap-intro{
+.page-mainer .intro-section{
     width: 100%;
     min-width: 1184px;
     margin: 0 auto;
     background: #ffffff;
 }
-.page-mainer .section-wrap-intro .intro-container{
+.page-mainer .intro-section .intro-container{
     width: 1184px;
     margin: 0 auto;
     padding: 64px 12px;
     display: flex;
     justify-content: center;
 }
-.intro-container .intro-text.left{
+.intro-container .intro-box.left{
     width: 404px;
 }
-.intro-container .intro-text.right{
+.intro-container .intro-box.right{
     width: 352px;
 }
-.intro-text .intro-text-title{
+.intro-box .intro-title{
     padding: 24px 0 0;
     font-size: 32px;
     font-family: AlibabaPuHuiTiB;
     color: #000000;
 }
-.intro-text .intro-text-list{
+.intro-box .intro-list{
     margin-top: 32px;
     padding-left:  20px;
 }
-.intro-text .intro-text-item{
+.intro-box .intro-item{
     margin-top: 16px;
     line-height: 26px;
     font-size: 16px;
@@ -217,7 +217,7 @@ ul{
 .intro-container .intro-img.left{
     margin-right: 88px;
 }
-.section-wrap-product{
+.product-section{
     height: 418px;
     padding-top: 72px;
     padding-bottom: 79px;
@@ -226,50 +226,50 @@ ul{
     margin: 0 auto;
     background: #ffffff;
 }
-.section-wrap-product .product-title{
+.product-section .product-title{
     font-size: 32px;
     padding-bottom: 56px;
     font-family: AlibabaPuHuiTiB;
     color: #000000;
     text-align: center;
 }
-.section-wrap-product .product-list-container{
+.product-section .product-container{
     width: 1184px;
     height: 162px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
-.section-wrap-product .product-list-container .product-list-img-text-container{
+.product-section .product-container .product-box{
     text-align: center;
 }
-.section-wrap-product .product-list-container .product-list-img-text-container img{
+.product-section .product-container .product-box img{
     width: 72px;
     height: 72px;   
     object-fit: cover;
     vertical-align: middle;
     /* 当应用在行内元素或行内块级元素上时，vertical-align 控制元素与行内元素框的垂直对齐方式。middle 的效果是使元素的中部与行内框的中部对齐。 */
 }
-.section-wrap-product .product-list-img-text-container .product-title-item{
+.product-section .product-box .product-item-title{
     font-size: 20px;
     color: #000000;
     line-height: 28px;
     margin-bottom: 14px;
     margin-top: 24px;
 }
-.section-wrap-product .product-list-img-text-container .product-descpt-item{
+.product-section .product-box .product-item-desc{
     font-family: PingFangSC-Regular, PingFang SC;
     font-size: 16px;
     color: rgba(0, 0, 0, 0.45);
 }
-.section-wrap-apply{
+.apply-section{
     min-width: 1440px;
     width: 100%;
     height: 348px;
     background-color: #196eff;
     margin: 0 auto;
 }
-.section-wrap-apply .apply-box{
+.apply-section .apply-box{
     margin: 0 auto;
     width: 1440px;
     height: 348px;
@@ -279,14 +279,14 @@ ul{
     align-items: center;
     background: url(./image/apply-bg.2c330740.png) repeat-x center / cover;
 }
-.section-wrap-apply .apply-box .apply-title{
+.apply-section .apply-box .apply-title{
     height: 40px;
     font-size: 32px;
     font-family: AlibabaPuHuiTiB;
     color: #ffffff;
     line-height: 40px;
 }
-.section-wrap-apply .apply-box .apply-content{
+.apply-section .apply-box .apply-content{
     margin: 16px 0 32px;
     height: 40px;
     font-size: 18px;
@@ -294,7 +294,7 @@ ul{
     color: #ffffff;
     line-height: 40px;
 }
-.section-wrap-apply .apply-box .apply-btn{
+.apply-section .apply-box .apply-btn{
     width: 160px;
     height: 52px;
     background: #ffffff;
@@ -305,7 +305,7 @@ ul{
     font-weight: 500;
     color: #1764e8;
 }
-.section-wrap-leg{
+.leg-section{
     width: 100%;
     height: 84px;
     min-width: 1184px;
@@ -313,7 +313,7 @@ ul{
     background: #ffffff;
     border-top: 1px solid #ebebeb; 
 }
-.section-wrap-leg .leg-container{
+.leg-section .leg-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -323,26 +323,26 @@ ul{
     padding-right: 32px;
     line-height: 84px;
 }
-.section-wrap-leg .leg-container .leg-img{
+.leg-section .leg-container .leg-img{
     width: 116px;
     height: 36px;
     margin: auto 0;
     object-fit: contain;
 }
-.section-wrap-leg .leg-container a{
+.leg-section .leg-container a{
     text-decoration: none;
     color: rgb(51, 51, 51);
     cursor: pointer;
     transition: color 0.3s;
 }
-.section-wrap-leg .leg-container .leg-box .leg-title{
+.leg-section .leg-container .leg-box .leg-title{
     font-size: 16px;
     font-family: PingFangSC-Medium, PingFang SC;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.85);
     margin-right: 8.10px;
 }
-.section-wrap-leg .leg-container .leg-box .leg-desc{
+.leg-section .leg-container .leg-box .leg-desc{
     font-size: 16px;
     font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
@@ -356,13 +356,13 @@ ul{
     margin: 0 auto;
     background: #ffffff;
 }
-.page-footer .page-footer-info{
+.page-footer .footer-desc{
     font-size: 12px;
     color: rgba(0, 0, 0, 0.65);
     margin-top: 0;
     margin-bottom: 1em;
 }
-.page-footer .page-footer-info a{
+.page-footer .footer-desc a{
     text-decoration: none;
     color: rgba(0, 0, 0, 0.65);
 }
